@@ -1,0 +1,19 @@
+{
+  "name": "create-proxy",
+  "amdName": "createProxy",
+  "version": "0.0.1",
+  "main": "dist/create-proxy.js",
+  "module": "dist/create-proxy.es.js",
+  "jsnext:main": "dist/create-proxy.es.js",
+  "umd:main": "dist/create-proxy.umd.js",
+  "repository": "https://github.com/L-Chris/create-proxy",
+  "author": "L-Chris <563303226@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf dist && microbundle --external all"
+  },
+  "devDependencies": {
+    "microbundle": "0.4.4",
+    "rimraf": "^2.6.2"
+  }
+}

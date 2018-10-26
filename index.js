@@ -1,10 +1,10 @@
-export default function createProxy (target, that) {
-  const keys = Object.keys(that)
+export default function createProxy (target, proxyOptions) {
+  const keys = Object.keys(proxyOptions)
   const keyMap = createMap(keys)
   const obj = Object.create(null)
 
   for (const key of keys) {
-    obj[key] = new Proxy(target[key], that[key])
+    obj[key] = new Proxy(target[key], proxyOptions[key])
   }
 
   const p = new Proxy(target, {
